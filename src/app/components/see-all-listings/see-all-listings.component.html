@@ -30,13 +30,18 @@
     <li class="list-group-item" *ngFor="let lists of list">
         <div class="row">
             {{lists.id}}
-            <div class="col-lg-2">
+            <div class="col-xl-2">
                 <img src="{{lists.url}}" alt="house" style="width: 100px; height: 100px" />
             </div>
             <div class="col-lg-10">
                 <p>Location: {{lists.location}}</p>
                 <p>Price: {{lists.price | currency}}</p> 
             </div>
+            
         </div>
+        <form>
+        <!-- <a class="btn btn-primary" routerLink="/edit" href="#">Edit Listings</a> -->
+        <button (click)="onClick(lists.id)" class="btn btn-primary">Edit</button>
+    </form>
     </li>
 </ul>

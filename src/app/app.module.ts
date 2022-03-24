@@ -18,6 +18,7 @@ import { SellersPageComponent } from './components/sellers-page/sellers-page.com
 import { AddListingsComponent } from './components/add-listings/add-listings.component';
 import { SeeAllListingsComponent } from './components/see-all-listings/see-all-listings.component';
 import { FormsModule } from '@angular/forms';
+import { EditListingComponent } from './components/edit-listing/edit-listing.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { FormsModule } from '@angular/forms';
     AboutUsComponent,
     SellersPageComponent,
     AddListingsComponent,
-    SeeAllListingsComponent
+    SeeAllListingsComponent,
+    EditListingComponent
    
     
   ],

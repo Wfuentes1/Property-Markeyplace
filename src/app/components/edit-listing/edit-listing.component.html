@@ -1,0 +1,51 @@
+<h1>Edit Listings</h1>
+  <form #listingForm="ngForm" (submit)="onSubmit(listingForm.value)">
+ 
+ 
+   <div class="form-group">
+     <label for="">Price</label>
+     <input
+       type="number"
+       name="price"
+       class="form-control"
+      ngModel
+       #price="ngModel"
+       [class.is-invalid]="price.invalid && price.touched"
+       required
+     />
+     <small class="text-danger" [class.d-none]="price.untouched || price.valid">*This is required field</small>
+   </div>
+ 
+   <div class="form-group">
+     <label for="">Location</label>
+     <input
+       type="text"
+       name="location"
+       class="form-control"
+       ngModel
+       #location="ngModel"
+       [class.is-invalid]="location.invalid && location.touched"
+       required
+
+     />
+      
+   </div>
+   <div class="form-group">
+    <label for="picurl">Picture Url</label>
+    <input 
+    type="text" 
+    name="url"
+    class="form-control" 
+    placeholder="Enter Picture Url" 
+    ngModel
+    #url="ngModel"
+    [class.is-invalid]="url.invalid && url.touched"
+       required
+    />
+  </div>
+
+ 
+   <input [disabled]="listingForm.invalid" type="submit" value="Submit" class="btn btn-primary" />
+ </form> 
+
+ 
