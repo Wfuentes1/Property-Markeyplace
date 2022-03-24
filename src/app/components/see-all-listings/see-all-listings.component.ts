@@ -30,11 +30,7 @@ listing:Listing= {id:0,location:"dhff",price:5000,url:"jdhf",sellerId:1 };
 
 
   onClick(id:any){
-    
-  this.data.getListing(id).subscribe(data => {this.listing=data})
-  do{
-  this.share.updateListing(this.listing)
-    }while(this.share.showListing().id=0)
+  this.share.updateListing(id)
     this.router.navigate(["edit",id])
     console.log("clicked")
   

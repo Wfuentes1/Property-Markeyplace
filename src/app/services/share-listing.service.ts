@@ -6,9 +6,9 @@ import { Listing } from '../listing';
 export class ShareListingService {
   listing:Listing= {id:0,location:"kksks",price:5000,url:"jdhf",sellerId:1 };
 
-  updateListing(list:Listing){
-    this.listing=list
-  console.log(list)
+  updateListing(id:number){
+    this.listing.id=id
+  
   
   }
 
