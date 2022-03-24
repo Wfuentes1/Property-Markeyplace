@@ -26,38 +26,16 @@
 <hr>
 
 <ul class="list-group">
-    <!-- <li class="list-group-item"><span><img src="https://www.nps.gov/apco/learn/historyculture/images/Peers-House.jpg"
-                alt="house" style="width: 100px; height: 100px" /> Description</span></li>
-    <li class="list-group-item">
+    
+    <li class="list-group-item" *ngFor="let lists of list">
         <div class="row">
+            {{lists.id}}
             <div class="col-lg-2">
-                <img src="https://www.nps.gov/apco/learn/historyculture/images/Peers-House.jpg" alt="house"
-                    style="width: 100px; height: 100px" />
+                <img src="{{lists.url}}" alt="house" style="width: 100px; height: 100px" />
             </div>
             <div class="col-lg-10">
-                Description
-            </div>
-        </div>
-    </li>
-    <li class="list-group-item">A fourth item</li>
-    <li class="list-group-item">And a fifth one</li>
-    <li class="list-group-item">
-        <div class="row">
-            <div class="col-lg-2">
-                <img src="{{listings[0].imgThumbnail}}" alt="house" style="width: 100px; height: 100px" />
-            </div>
-            <div class="col-lg-10">
-                {{listings[0].description}}
-            </div>
-        </div>
-    </li> -->
-    <li class="list-group-item" *ngFor="let listing of listings">
-        <div class="row">
-            <div class="col-lg-2">
-                <img src="{{listing.imgThumbnail}}" alt="house" style="width: 100px; height: 100px" />
-            </div>
-            <div class="col-lg-10">
-                {{listing.description}}
+                <p>Location: {{lists.location}}</p>
+                <p>Price: {{lists.price | currency}}</p> 
             </div>
         </div>
     </li>

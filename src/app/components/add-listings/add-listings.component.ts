@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
-
+import { NgForm } from '@angular/forms';
+import { Property } from 'src/app/property';
+import { ListingServiceService } from 'src/app/services/listing-service.service';
 
 @Component({
   selector: 'app-add-listings',
@@ -8,13 +9,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-listings.component.css']
 })
 export class AddListingsComponent implements OnInit {
+  
+   propModel= new Property("seller",5000, "chhic", "hshh")
 
-  constructor() { }
+   constructor() { }
+   
 
   ngOnInit(): void {
+    
   }
-onFormSubmit(data: any){
-  console.log(data)
+
+onSubmit(data: any){
+  
+ console.log(data);
 }
 
 }

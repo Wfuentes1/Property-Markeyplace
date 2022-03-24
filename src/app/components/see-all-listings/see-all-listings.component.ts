@@ -1,31 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ListingServiceService } from 'src/app/services/listing-service.service';
 @Component({
   selector: 'app-see-all-listings',
   templateUrl: './see-all-listings.component.html',
   styleUrls: ['./see-all-listings.component.css']
 })
 export class SeeAllListingsComponent implements OnInit {
+  list:any[] = []
+ 
 
-  listings: any[] = [
-    {
-      "imgThumbnail": "https://www.nps.gov/apco/learn/historyculture/images/Peers-House.jpg",
-      "description": "description goes here"
-    },
-    {
-      "imgThumbnail": "https://www.nps.gov/apco/learn/historyculture/images/Peers-House.jpg",
-      "description": "description go yonder"
-    },
-    {
-      "imgThumbnail": "https://www.nps.gov/apco/learn/historyculture/images/Peers-House.jpg",
-      "description": "description do go down"
-    }
-  ]
+  //constructor() { }
+   constructor(private data : ListingServiceService) {
 
-  constructor() { }
-
-  ngOnInit(): void {
   }
+
+ ngOnInit(): void {
+   this.data.getListings().subscribe(data => {this.list = data});
+   
+ }
 
   clickSearch(): void {
     console.log("button clicked");
