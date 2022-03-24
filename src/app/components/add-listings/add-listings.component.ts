@@ -9,18 +9,22 @@ import { ListingServiceService } from 'src/app/services/listing-service.service'
   styleUrls: ['./add-listings.component.css']
 })
 export class AddListingsComponent implements OnInit {
-  
-   propModel= new Property("seller",5000, "chhic", "hshh")
-
-   constructor() { }
+  list:any[] = []
    
 
+   //constructor() { }
+    constructor(private data : ListingServiceService) {
+
+   }
+
   ngOnInit(): void {
-    
+   
   }
 
 onSubmit(data: any){
-  
+  this.data.addListings(data).subscribe(response=>{
+    this.data=data.data
+  })
  console.log(data);
 }
 
