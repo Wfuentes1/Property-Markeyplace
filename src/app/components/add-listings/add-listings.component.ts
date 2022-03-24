@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Property } from 'src/app/property';
 import { ListingServiceService } from 'src/app/services/listing-service.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-add-listings',
   templateUrl: './add-listings.component.html',
@@ -13,7 +13,7 @@ export class AddListingsComponent implements OnInit {
    
 
    //constructor() { }
-    constructor(private data : ListingServiceService) {
+    constructor(private data : ListingServiceService, private router:Router) {
 
    }
 
@@ -25,6 +25,7 @@ onSubmit(data: any){
   this.data.addListings(data).subscribe(response=>{
     this.data=data.data
   })
+  this.router.navigate(["listings"])
  console.log(data);
 }
 

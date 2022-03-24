@@ -10,7 +10,7 @@ import { ShareListingService } from 'src/app/services/share-listing.service';
 })
 export class SeeAllListingsComponent implements OnInit {
   list:any[] = []
- 
+  showDelete: any[50] = []
 
   //constructor() { }
    constructor(private data : ListingServiceService, private router: Router, private share: ShareListingService) {
@@ -36,6 +36,30 @@ listing:Listing= {id:0,location:"dhff",price:5000,url:"jdhf",sellerId:1 };
   
 
   }
+
+  deleteButtonHandler(data: any){
+    if(!this.showDelete[data]){
+      this.showDelete[data] = true
+    }
+    else{
+      this.showDelete[data] = false
+    }
+  }
+
+  deleteRowHandler(id: any){
+    this.data.deleteListingById(id)
+    .subscribe()
+    
+    // (data => {
+    //   this.listings = data;
+      
+    //   // this.listings.push(show);
+    //   // console.log(this.listings)
+    // })
+    
+  }
+
+  
 
 }
 

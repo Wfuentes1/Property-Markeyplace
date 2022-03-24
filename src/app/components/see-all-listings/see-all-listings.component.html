@@ -26,22 +26,42 @@
 <hr>
 
 <ul class="list-group">
-    
-    <li class="list-group-item" *ngFor="let lists of list">
-        <div class="row">
+    <div class="row">
+    <div class="col-sm-4" *ngFor="let lists of list">
+        <div class="card">
             {{lists.id}}
-            <div class="col-xl-2">
+            <div class="col-sm-2">
                 <img src="{{lists.url}}" alt="house" style="width: 100px; height: 100px" />
             </div>
-            <div class="col-lg-10">
+            <div class="col-lg-10" style="text-align:center">
+                <!-- <a class="btn btn-primary" routerLink="/edit" href="#">Edit Listings</a> -->
+                <button (click)="onClick(lists.id)" class="btn btn-primary">Edit</button>
+                <button class = "btn btn-secondary" (click)="deleteButtonHandler(lists.id)" >Delete</button>
+                
+                <div class=" nav-link" *ngIf="showDelete[lists.id]" >
+                   <p> Are you sure you wish to delete this?</p>
+                    <button class = "btn btn-danger" 
+                    style="margin-left: 10px"  (click)="deleteRowHandler(lists.id)"  routerLink="/listings">Yes, delete</button>
+                </div>
+                </div>
+            <div class="col-lg-10" >
                 <p>Location: {{lists.location}}</p>
                 <p>Price: {{lists.price | currency}}</p> 
             </div>
             
-        </div>
         <form>
-        <!-- <a class="btn btn-primary" routerLink="/edit" href="#">Edit Listings</a> -->
+            <!-- <div class="col-lg-10" style="text-align:center">
+         <a class="btn btn-primary" routerLink="/edit" href="#">Edit Listings</a>
         <button (click)="onClick(lists.id)" class="btn btn-primary">Edit</button>
+        <button class = "btn btn-danger" (click)="deleteButtonHandler(lists.id)" >Delete</button>
+        
+        <div class="col-lg-3 nav-link" *ngIf="showDelete[lists.id]">
+            Are you sure you wish to delete this?<button class = "btn btn-secondary" 
+            style="margin-left: 10px"  (click)="deleteRowHandler(lists.id)"  routerLink="/listings">Yes, delete</button>
+        </div>
+        </div> -->
     </form>
-    </li>
+</div>
+</div>
+</div>
 </ul>

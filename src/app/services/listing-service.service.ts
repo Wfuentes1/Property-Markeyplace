@@ -28,4 +28,9 @@ export class ListingServiceService {
     return this.http.get<any>(Url+"/"+id)
   }
 
+  deleteListingById(id: any): Observable<any[]>{
+    return this.http.delete<any[]>('http://localhost:9000/listings/' + id);
+    
+  }
+
 }
