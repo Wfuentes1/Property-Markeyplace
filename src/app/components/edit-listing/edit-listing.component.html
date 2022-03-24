@@ -1,4 +1,5 @@
-<h1>Edit Listings</h1>
+<h1 style="text-align: center;">Edit Listings</h1>
+<div class="container">
   <form #listingForm="ngForm" (submit)="onSubmit(listingForm.value)">
  
  
@@ -47,5 +48,6 @@
  
    <input [disabled]="listingForm.invalid" type="submit" value="Submit" class="btn btn-primary" />
  </form> 
+</div>
 
  

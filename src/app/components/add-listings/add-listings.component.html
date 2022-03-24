@@ -1,7 +1,8 @@
-<h1>Add Listings</h1>
+<h1 style="text-align:center">Add Listings</h1>
+<div class="container">
   <form #listingForm="ngForm" (submit)="onSubmit(listingForm.value)">
  
-  
+  <div class="col-sm-2"></div>
    <div class="form-group" >
      <label for="">Seller Name</label>
      <input
@@ -60,6 +61,7 @@
 
  
    <input [disabled]="listingForm.invalid" type="submit" value="Submit" class="btn btn-primary" />
+   
  </form> 
-
+</div>
  
