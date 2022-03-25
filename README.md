@@ -18,9 +18,23 @@ User can view the listing on the see all listings page and from there can edit o
 
 
 # Getting Started 
-use git clone https://github.com/Wfuentes1/Property-Marketplace.git to get project repo from command line
+use git clone https://github.com/Wfuentes1/Property-Markeyplace.git to get project repo from command line.
+When angular is open in vscode use ng s -o to run the server on the browser
+
+project2-spring/ProjectTwo is to be open in in Intellji IDEA
+
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
+
+
+
+
+# Contributors
+Elliot Culbertson
+
+Shane Moorhead
 
 ## Development server
 
