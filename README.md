@@ -7,9 +7,13 @@ User can view the listing on the see all listings page and from there can edit o
 
 # Technologies
 *Angular
+
 *Spring-Boot
+
 *HTML
+
 *CSS
+
 *TypeScript
 
 
