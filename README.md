@@ -2,8 +2,8 @@
 Property MarketPlace. In this documents we will be using Angular and SpringBoot to develop a full stack group project.
 The Property Marketplace will manage the process of uploading entires of housing on to springBoot and showing on a angular website.
 Users will be able to add a listing of a home for sale and put location, price, and picture url.
-User: can upload listings, edit listing, and delete listing.
-User can view the listing on the see all listings page and from there can edit or delete a listing they inputed.
+User: *can upload listings, *edit listing, and *delete listing.
+User *can view the listing on the see all listings page and from there can edit or delete a listing they inputed.
 
 # Technologies
 *Angular
