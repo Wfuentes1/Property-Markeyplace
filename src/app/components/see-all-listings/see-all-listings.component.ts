@@ -10,7 +10,7 @@ import { ShareListingService } from 'src/app/services/share-listing.service';
 })
 export class SeeAllListingsComponent implements OnInit {
   list:any[] = []
-  showDelete: any[50] = []
+  showDelete: any[5000] = []
 
   //constructor() { }
    constructor(private data : ListingServiceService, private router: Router, private share: ShareListingService) {

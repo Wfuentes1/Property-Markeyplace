@@ -1,47 +1,54 @@
 <section class="h-100 gradient-form" style="background-color: #eee;">
-    <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-xl-10">
-          <div class="card rounded-3 text-black">
-            <div class="row g-0">
-                <div class="col-lg-6">
-                <div class="card-body p-md-2 mx-md-4">
-  
-                  <div class="text-center">
-                    <h4 class="mt-1 mb-5 pb-1">Property Marketplcae</h4>
-                   
-                  </div>
-  
-                  <form>
-                    <p>Please login to your account</p>
-  
-                    <div class="form-outline mb-2">
-                        <label class="form-label" for="username">Username:</label>
-                      <input type="text" id="username" class="form-control" placeholder="Username"/>
-                    </div>
-  
-                    <div class="form-outline mb-4">
-                        <label class="form-label" for="password">Password:</label>
-                      <input type="password" id="password" class="form-control"  placeholder="password" />
-                      
-                    </div>
-  
-                    <div class="text-center pt-1 mb-2 pb-1">
-                      <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Log in</button>
-                    </div>
-  
-                  </form>
-  
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-10">
+        <div class="card rounded-3 text-black">
+          <div class="row g-0">
+            <div class="col-lg-6">
+              <div class="card-body p-md-2 mx-md-4">
+
+                <div class="text-center">
+                  <h4 class="mt-1 mb-5 pb-1">Property Marketplcae</h4>
+
                 </div>
+
+                <form #listingForm="ngForm" (submit)="onSubmit(listingForm.value)">
+                  <p>Please login to your account</p>
+
+                  <div class="form-outline mb-2">
+                    <label class="form-label" for="username">Username:</label>
+                    <input type="text" id="username" class="form-control" placeholder="Username" />
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="password">Password:</label>
+                    <input type="password" id="password" class="form-control" placeholder="password" />
+
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="radio" id="buyer" name="fav_language" value="buyer">
+                    <label style="margin-left: 10px" for="html">Buyer</label><br>
+                    <input type="radio" id="seller" name="fav_language" value="seller">
+                    <label style="margin-left: 10px" for="css">Seller</label><br>
+                  </div>
+
+                  <div class="text-center pt-1 mb-2 pb-1">
+                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Log in</button>
+                  </div>
+
+                </form>
+
               </div>
-              <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
-               
-                    <img src="assets/logo/prop.jpeg" width="100%">
+            </div>
+            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+
+              <img src="assets/logo/prop.jpeg" width="100%">
             </div>
           </div>
         </div>
       </div>
+    </div>
   </div>
-  </div>
-  
-  </section>
+
+</section>

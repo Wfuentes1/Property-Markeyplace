@@ -35,7 +35,7 @@
             <div class="col-sm-2">
                 <img src="{{lists.url}}" alt="house" style="width: 100px; height: 100px" />
             </div>
-            <div class="col-lg-10" style="text-align:center">
+            <div class="col-lg-10" style="margin-top: 10px">
                 <!-- <a class="btn btn-primary" routerLink="/edit" href="#">Edit Listings</a> -->
                 <button (click)="onClick(lists.id)" class="btn btn-primary">Edit</button>
                 <button class = "btn btn-secondary" (click)="deleteButtonHandler(lists.id)" >Delete</button>
@@ -43,7 +43,7 @@
                 <div class=" nav-link" *ngIf="showDelete[lists.id]" >
                    <p> Are you sure you wish to delete this?</p>
                     <button class = "btn btn-danger" 
-                    style="margin-left: 10px"  (click)="deleteRowHandler(lists.id)"  routerLink="/listings">Yes, delete</button>
+                    style="margin-left: 10px; text-align:center"  (click)="deleteRowHandler(lists.id)"  routerLink="/buyer">Yes, delete</button>
                 </div>
                 </div>
             <div class="col-lg-10" >
